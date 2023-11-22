@@ -1,0 +1,79 @@
+/* Establece los estilos base para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Establece los estilos para el cuerpo del documento */
+body {
+    min-height: 100vh;
+    background-color: #898ed3;
+    display: grid;
+    place-items: center; /* Centra el contenido */
+}
+
+/* Establece los estilos para la calculadora */
+.calculadora {
+    background-color: #020205;
+    color: white;
+    width: 350px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: grid; /* Usa CSS Grid para organizar los botones */
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas de igual tamaño */
+    gap: .5rem; /* Añade un espacio de .5rem entre los botones */
+}
+
+/* Establece los estilos para la pantalla de la calculadora */
+.pantalla {
+    grid-column: 1 / -1; /* Hace que la pantalla ocupe todas las columnas */
+    background-color: #323bf7;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+/* Establece los estilos para los botones de la calculadora */
+.botones {
+    background-color: #303038;
+    color: white;
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 25px; /* Aumenta el tamaño de la fuente */
+    border-radius: 50%; /* Hace que los botones sean redondos */
+}
+
+/* Cambia el color de fondo de los botones cuando se pasa el ratón por encima */
+.botones:hover {
+    background-color: #979bcf;
+}
+
+/* Hace que el botón cero ocupe dos columnas */
+#cero {
+    grid-column: span 2;
+    border-radius: 25%;
+}
+
+/* Hace que el botón de resultado ocupe dos filas y cambia su color de fondo */
+#resultado {
+    grid-row: span 2;
+    background-color: #e99323;
+    border-radius: 25%;
+}
+
+/* Cambia el color de fondo del botón de resultado cuando se pasa el ratón por encima */
+#resultado:hover {
+    background-color: #979bcf;
+}
